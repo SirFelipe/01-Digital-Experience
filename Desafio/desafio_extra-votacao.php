@@ -21,10 +21,20 @@
         return $array;
       }
 
+      function votacoes(){
+        $brancos = "Votos brancos:";
+        $validos = "Votos válidos:";
+        $nulos = "Votos nulos:";
+        $array = [$brancos, $validos, $nulos];
+        return $array;
+      };
+
       //array de votos
       $votos = eleitores(1000,300,500,200);
+      $nomes = votacoes();
+      echo '<div class="alert alert-info text-center" role="alert">' . " | Resultado | " . '</div>';
       foreach ($votos as $v) {
-        echo $v . '%' . "<br>";
+        echo '<div class="alert alert-info text-center" role="alert">' . $v . '%' . "<br> </div>";
       }
     }
 

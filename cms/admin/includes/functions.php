@@ -57,4 +57,34 @@ function removerCategoria(){
 }
 
 
+//FUNÇÃO DE MOSTRAR POSTS
+function mostrarDadosPost(){
+  global $connection;
+
+  $query = "SELECT * FROM T_POST";
+  $select_todos_posts = mysqli_query($connection, $query);
+
+  //TRAZENDO O NOME DAS CATEGORIAS DO DB COM ARRAY ASSOCIATIVO.
+  while($row = mysqli_fetch_assoc($select_todos_posts)){
+      $nm_post = $row['nm_post'];
+      $id_post = $row['id_post'];
+      $nm_autor = $row['nm_autor'];
+      $dt_post = $row['dt_post'];
+      $ds_conteudo = $row['ds_conteudo'];
+      $img_post = $row['img_post'];
+
+      /* foreach ($row as $key) { echo $key;}*/
+      echo '<tr>';
+      echo '<td>' . $id_post . '</td>';
+      echo '<td>' . $nm_post . '</td>';
+      echo '<td>' . $nm_autor . '</td>';
+      echo '<td>' . $dt_post . '</td>';
+      echo '<td>' . $ds_conteudo . '</td>';
+      echo "<td class=col-sm-2><img src='../img/$img_post' class='img-responsive'></td>";
+      //echo '<td class="text-center"><a class="fa fa-trash" href="post.php?delete=' . $id_post . '"></a></td>';
+      //echo '<td class="text-center"><a class="fa fa-pencil" href="post.php?edit=' .  $id_post . '"></a></td>';
+      echo '</tr>';
+  }
+}
+
  ?>

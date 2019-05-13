@@ -24,13 +24,13 @@
                   $select_posts = mysqli_query($connection, $query);
 
                   while($row = mysqli_fetch_assoc($select_posts)){
-                    $nm_titulo = $row['nm_titulo'];
+                    $nm_titulo = $row['nm_post'];
                     $nm_autor = $row['nm_autor'];
                     $dt_post = $row['dt_post'];
                     $ds_conteudo = $row['ds_conteudo'];
                     $img_post = $row['img_post'];
-                    $ds_tags = $row['ds_tags'];
-                    
+                    //$ds_tags = $row['ds_tags'];
+
                     $dt_post = date('d-m-Y', strtotime($dt_post));
                 ?>
 

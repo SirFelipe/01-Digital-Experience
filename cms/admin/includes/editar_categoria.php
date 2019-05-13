@@ -28,7 +28,7 @@
 <hr>
 
 <?php
-  echo $id_cat;
+  
   if(isset($_POST['atualizar'])){
     $edita_nm_cat = $_POST['nm_cat'];
     $query = "UPDATE T_CATEGORIA SET nm_cat = '$edita_nm_cat' WHERE id_cat = $id_cat";

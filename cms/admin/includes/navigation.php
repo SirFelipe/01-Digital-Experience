@@ -124,36 +124,32 @@
                 <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
             </li>
             <li>
-                <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
-            </li>
-            <li>
-                <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
-            </li>
-            <li>
-                <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
-            </li>
-            <li>
-                <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
-            </li>
-            <li>
-                <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
-            </li>
-            <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
+                <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Posts <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo" class="collapse">
                     <li>
-                        <a href="#">Dropdown Item</a>
+                        <a href="../admin/add_post.php">Adicionar Post</a>
                     </li>
                     <li>
-                        <a href="#">Dropdown Item</a>
+                        <a href="../admin/post.php">Visualizar Posts</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Usuários <i class="fa fa-fw fa-caret-down"></i></a>
+                <ul id="demo" class="collapse">
+                    <li>
+                        <a href="#">Adicionar Usuários</a>
+                    </li>
+                    <li>
+                        <a href="#">Visualizar Usuários</a>
                     </li>
                 </ul>
             </li>
             <li class="active">
-                <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
+                <a href="categorias.php"><i class="fa fa-fw fa-file"></i> Categorias</a>
             </li>
             <li>
-                <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
+                <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> Perfil </a>
             </li>
         </ul>
     </div>

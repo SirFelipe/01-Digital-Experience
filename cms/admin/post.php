@@ -34,9 +34,9 @@
                                   <th>ID</th>
                                   <th>Título</th>
                                   <th>Autor</th>
-                                  <th>Imagem</th>
                                   <th>Data</th>
                                   <th>Conteúdo</th>
+                                  <th>Imagem</th>
                                 </tr>
                               </thead>
                               <tbody>

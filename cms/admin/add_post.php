@@ -26,7 +26,34 @@
                             </li>
                         </ol>
                         <div class="col-sm-12">
+                          <?php
+                            adicionarPost();
+                           ?>
+                          <form action="" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                              <label for="">Título do Post</label>
+                              <input type="text" class="form-control" name="post_titulo" placeholder="">
+                            </div>
 
+                            <div class="form-group">
+                              <label for="">Autor</label>
+                              <input type="text" class="form-control" name="post_autor" placeholder="">
+                            </div>
+
+                            <div class="form-group">
+                              <label for="">Imagem do post</label>
+                              <input type="file" class="form-control" name="post_imagem" placeholder="">
+                            </div>
+
+                            <div class="form-group">
+                              <label for="">Conteúdo</label>
+                              <textarea type="text" class="form-control" name="post_conteudo" cols="30" rows="10" placeholder="Digite o conteúdo do post"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                              <input type="submit" class="btn btn-primary" name="adicionar" value="Adicionar">
+                            </div>
+                          </form>
                         </div>
 
                     </div>

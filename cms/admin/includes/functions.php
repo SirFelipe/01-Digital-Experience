@@ -79,11 +79,35 @@ function mostrarDadosPost(){
       echo '<td>' . $nm_post . '</td>';
       echo '<td>' . $nm_autor . '</td>';
       echo '<td>' . $dt_post . '</td>';
-      echo '<td>' . $ds_conteudo . '</td>';
+      echo '<td>' . mb_strimwidth($ds_conteudo, 0, 100, "...") . '</td>';
       echo "<td class=col-sm-2><img src='../img/$img_post' class='img-responsive'></td>";
       //echo '<td class="text-center"><a class="fa fa-trash" href="post.php?delete=' . $id_post . '"></a></td>';
       //echo '<td class="text-center"><a class="fa fa-pencil" href="post.php?edit=' .  $id_post . '"></a></td>';
       echo '</tr>';
+  }
+}
+
+
+function adicionarPost(){
+
+  if(isset($_POST['adicionar'])){
+    global $connection;
+    $post_titulo = $_POST['post_titulo'];
+    $post_autor = $_POST['post_autor'];
+    $post_imagem = $_FILES['post_imagem']['name'];
+    $post_imagem_temp = $_FILES['post_imagem']['tmp_name'];
+
+    move_uploaded_file($post_imagem_temp, '../img/' . $post_imagem);
+    $post_conteudo = $_POST['post_conteudo'];
+
+    $query = "INSERT INTO T_POST(nm_post,nm_autor,ds_conteudo, dt_post ,img_post) VALUES ('$post_titulo','$post_autor', '$post_conteudo',now(), '$post_imagem')";
+    $resultado = mysqli_query($connection, $query);
+
+    if(!$resultado){
+      echo "Erro ao inserir post.";
+    }else{
+      echo "Post inserido com sucesso.";
+    }
   }
 }
 

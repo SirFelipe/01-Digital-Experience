@@ -9,7 +9,9 @@
     $ds_senha = $_POST['dsSenha'];
 
     //TRATAMENTO SQL INJECTION
-    
+    $nm_usuario = mysqli_real_escape_string($connection, $nm_usuario);
+    $ds_senha = mysqli_real_escape_string($connection, $ds_senha);
+
 
     $query = 'SELECT * FROM T_USUARIO';
     $select_usuario = mysqli_query($connection, $query);

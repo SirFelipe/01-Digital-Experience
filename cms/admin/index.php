@@ -3,7 +3,7 @@
     <div id="wrapper">
         <!-- Navigation -->
         <?php include "includes/navigation.php"; ?>
-        
+
         <div id="page-wrapper">
             <div class="container-fluid">
 
@@ -11,8 +11,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Blank Page
-                            <small>Subheading</small>
+                            Bem vindo ao painel de controle
+                            <small><?php echo $_SESSION['nm_apelido']; ?></small>
                         </h1>
                         <ol class="breadcrumb">
                             <li>
